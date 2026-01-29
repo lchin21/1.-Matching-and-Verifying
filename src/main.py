@@ -6,11 +6,11 @@ def main():
     student_preferences: list[list[int]] = []
     
     for i in range(n):
-        preferences: list[int] = [int(n) - 1 for n in input().strip().split(" ")]
+        preferences: list[int] = [int(n) for n in input().strip().split(" ")]
         hospital_preferences.append(preferences)
         
     for i in range(n):
-        preferences: list[int] = [int(n) - 1 for n in input().strip().split(" ")]
+        preferences: list[int] = [int(n) for n in input().strip().split(" ")]
         student_preferences.append(preferences)
     
     # call matcher

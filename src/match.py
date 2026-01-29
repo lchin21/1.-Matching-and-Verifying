@@ -10,6 +10,10 @@ def preference(student_prefs, student, new_hospital, current_hospital):
     return False
 
 def matcher(n, hospital_prefs, student_prefs):
+
+    hospital_prefer_list = [[x - 1 for x in row] for row in hospital_prefs]
+    student_prefer_list = [[x - 1 for x in row] for row in student_prefs]
+
     hospital_match = [-1] * n
     student_match = [-1] * n
     next_proposal_index = [0] * n
@@ -27,7 +31,7 @@ def matcher(n, hospital_prefs, student_prefs):
         if next_proposal_index[h] >= n:
             continue
 
-        s = hospital_prefs[h][next_proposal_index[h]]
+        s = hospital_prefer_list[h][next_proposal_index[h]]
         next_proposal_index[h] += 1
         proposals += 1
 
@@ -38,7 +42,7 @@ def matcher(n, hospital_prefs, student_prefs):
         else:
             current = student_match[s]
             # if it is preferred over the other hospital
-            if preference(student_prefs, s, h, current):
+            if preference(student_prefer_list, s, h, current):
                 student_match[s] = h
                 hospital_match[h] = s
                 hospital_match[current] = -1
