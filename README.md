@@ -7,6 +7,17 @@ Davis Pham - 38499319
 Lane Chin - 15117678
 
 
+The scalability function has a single dependency:
+
+matplotlib
+
+To Install:
+
+```
+pip install matplotlib
+```
+
+
 To compile and run matcher and validator with input file:
 
 ```
@@ -27,19 +38,10 @@ py src/scalability.py
 ```
 
 
-The scalability function has a single dependency:
-
-matplotlib
-
-To Install:
-
-```
-pip install matplotlib
-```
-
 Assumptions:
-there are equal number of student and hospitals
-the input format is followed, and preferences are ranked by integers
+
+1. There are equal number of student and hospitals.
+2. The input format is followed, and preferences are ranked by integers.
 
 
 Matching Time Plot
