@@ -11,6 +11,13 @@ To compile and run matcher and validator with input file:
 
 ```
 py src/main.py < test/example.in
+
+
+py src/main.py < test/data1.in 
+- to run one hospital and one student
+py src/main.py < test/data2.in 
+- to run empty file
+
 ```
 
 To run the scalability and create plots:
@@ -31,8 +38,8 @@ pip install matplotlib
 ```
 
 Assumptions:
-
-
+there are equal number of student and hospitals
+the input format is followed, and preferences are ranked by integers
 
 
 Matching Time Plot
