@@ -6,17 +6,17 @@ def verify(hospital_to_student_pairs: list[int], hospital_preferences: list[list
     n: int = len(hospital_preferences)
     
     if n != len(student_preferences):
-        print("Number of hospitals and students do not match.")
+        print("INVALID: Number of hospitals and students do not match.")
         return False
     
     if len(hospital_to_student_pairs) != len(set(hospital_to_student_pairs)):
-        print("Duplicate students in pairs.")
+        print("INVALID: Duplicate students in pairs.")
         return False
     
     student_to_hospital = {student: hospital for hospital, student in enumerate(hospital_to_student_pairs)}
         
     if len(student_to_hospital) != n:
-        print("Not all hospitals are matched.")
+        print("INVALID: Not all hospitals are matched.")
         return False
     
     for current_hospital, current_student in enumerate(hospital_to_student_pairs):
@@ -30,7 +30,8 @@ def verify(hospital_to_student_pairs: list[int], hospital_preferences: list[list
                 preferred_student_rank = hospital_preference_list.index(current_student)
                 
                 if preferred_student_rank < current_student_rank:
-                    print(f"Unstable pair: Hospital {preferred_hospital + 1} and Student {current_student + 1} prefer each other over their current matches.")
+                    print(f"UNSTABLE: Hospital {preferred_hospital + 1} and Student {current_student + 1} prefer each other over their current matches.")
                     return False
                     
+    print("VALID STABLE")
     return True

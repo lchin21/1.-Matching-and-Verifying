@@ -6,7 +6,40 @@ Davis Pham - 38499319
 
 Lane Chin - 15117678
 
-To compile and run matcher with input file:
 
-python3 src/main.py < test/example.in
+To compile and run matcher and validator with input file:
 
+```
+py src/main.py < test/example.in
+```
+
+To run the scalability and create plots:
+
+```
+py src/scalability.py
+```
+
+
+The scalability function has a single dependency:
+
+matplotlib
+
+To Install:
+
+```
+pip install matplotlib
+```
+
+Assumptions:
+
+
+
+
+Matching Time Plot
+
+![Matching Time Plot](matching_time_plot.png)
+
+
+Verification Time Plot
+
+![Verification Time Plot](verification_time_plot.png)

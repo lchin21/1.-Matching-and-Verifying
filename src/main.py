@@ -19,11 +19,9 @@ def main():
     # output match, 0 indexed so +1
     for h in range(n):
         print(h + 1, match[h] + 1)
-
-    print("----------------------------------------")
+        
     # call validator
     valid = verify(match, hospital_preferences, student_preferences)
-    if valid: print ("Valid Matching")
     
     
 if __name__ == "__main__":
