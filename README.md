@@ -18,6 +18,7 @@ pip install matplotlib
 ```
 
 
+
 To compile and run matcher and validator with input file:
 
 ```
@@ -31,11 +32,13 @@ py src/main.py < test/data2.in
 
 ```
 
+
 To run the scalability and create plots:
 
 ```
 py src/scalability.py
 ```
+
 
 
 Assumptions:
